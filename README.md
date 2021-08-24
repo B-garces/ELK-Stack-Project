@@ -4,7 +4,8 @@ Configured an ELK stack server in order to set up a cloud monitoring system. Dem
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+! [TODO: Update the path with the name of your diagram] ![dockerps](https://user-images.githubusercontent.com/61332852/130552198-b5d61bf4-fcee-47be-b537-899f00509cfb.png)
+(Images/diagram_filename.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
