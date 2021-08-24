@@ -1,0 +1,36 @@
+---
+- name Config web vms with docker
+  hosts 10.0.0.7 10.0.0.9 10.0.0.10
+  become true
+  tasks
+
+  - name Install docker.io
+    apt
+      force_apt_get yes
+      update_cache yes
+      name docker.io
+      state present
+
+  - name Install python3
+    apt
+      force_apt_get yes
+      name python3-pip
+      state present
+
+  - name Install docker
+    pip
+      name docker
+      state present
+
+  - name Creates a data container
+    docker_container
+      name dvwa
+      image cyberxsecuritydvwa
+      state started
+      published_ports 8080
+
+
+  - name Make sure a sercice unit is running
+    systemd
+      name docker
+      enabled yes
